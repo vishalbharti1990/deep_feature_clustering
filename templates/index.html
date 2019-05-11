@@ -1,0 +1,84 @@
+<html>
+	<head>
+	    <!-- Required meta tags -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <!-- Bootstrap CSS --> 
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <!-- <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}"> -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+		<!-- <link href="{{url_for('static', filename='upload_style.css')}}" type="text/css" rel="stylesheet"/> -->
+
+		<style type="text/css">
+			.btn-primary {
+			 border: none;
+			 padding: 3px 5px;
+			 text-decoration: none;
+			 font-size: 14px;
+			 margin: 0px 0px;
+			 cursor: pointer;
+			}
+			.myfg {
+			 padding: 3px 4px;
+			 text-decoration: none;
+			 font-size: 12px;
+			 margin: 2px 0px;
+			 cursor: pointer;
+			}
+			.spinner {
+			  display: inline-block;
+			  opacity: 0;
+			  max-width: 0;
+			  -webkit-transition: opacity 0.25s, max-width 0.45s;
+			  -moz-transition: opacity 0.25s, max-width 0.45s;
+			  -o-transition: opacity 0.25s, max-width 0.45s;
+			  transition: opacity 0.25s, max-width 0.45s;
+			  /* Duration fixed since we animate additional hidden width */
+			}
+
+			.has-spinner.active {
+			  cursor: progress;
+			}
+
+			.has-spinner.active .spinner {
+			  opacity: 1;
+			  max-width: 50px;
+			  /* More than it will ever come, notice that this affects on animation duration */
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row justify-content-md-center">
+				<div class="col-lg-6">
+					<h1>Fruit Clustering App</h1>
+					<a href="https://www.kaggle.com/moltean/fruits/version/2" title="Dataset">Data</a>
+					<br>
+	        		<p class="lead">Select an image.. Max size <span id="max-size"></span> KB:</p>
+			        <form id="upload-image-form" action="" method="post" enctype="multipart/form-data">
+			          <div id="image-preview-div" style="display: none">
+			            <label for="exampleInputFile">Selected image:</label>
+			            <br>
+			            <img id="preview-img" src="noimage">
+			          </div>
+			          <div class="form-group btn pl-0 myfg">
+			            <input type="file" name="file" id="file" required>
+			          </div>
+			          <br>
+			          <button class="btn btn-primary has-spinner" id="upload-button" type="submit" disabled><span class="spinner"><i class="fa fa-cog fa-spin"></i></span> Get Predictions</button>
+			        </form>
+				</div>
+			</div>
+		</div>
+		<div id="message" class="container"></div>
+
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>    
+	    <script src="{{ url_for('static', filename='upload-image.js') }}"></script>
+	</body>
+</html>
