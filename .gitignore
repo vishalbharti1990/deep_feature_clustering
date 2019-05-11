@@ -1,1 +1,4 @@
-Documents/
+Documents/.ssh
+Documents/.gitconfig
+Documents/.git-credentials
+Documents/.bash_history
