@@ -1,5 +1,5 @@
 # Deep Feature Clustering
-Clustering Fruits 360 dataset with deep feature extraction.
+Clustering Fruits 360 dataset with deep feature extraction. For feature extraction we use the code from this [link](https://github.com/jorisguerin/pretrainedCNN_clustering)
 ## App architecture
 The image below shows the architecture of the fruits clustering app
 
