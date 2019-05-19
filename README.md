@@ -25,4 +25,4 @@ To deploy the app on google cloud:
 
 `git clone https://bitbucket.org/vrbharti1990/ora/src/master/`
 
-`gcloud app deploy
+`gcloud app deploy`
